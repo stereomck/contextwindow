@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Is an AI PM Actually? — Context Window</title>
+  <meta name="description" content="The definitive breakdown — not the job description version. What the role demands, what technical knowledge you actually need, and what makes it genuinely different from traditional PM work.">
+  <meta name="author" content="Michael Kent">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="What Is an AI PM Actually?">
+  <meta property="og:description" content="The definitive breakdown — not the job description version.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://contextwindow.dev/posts/what-is-an-ai-pm.html">
+  <meta property="article:published_time" content="2026-04-03">
+
+  <link rel="canonical" href="https://contextwindow.dev/posts/what-is-an-ai-pm.html">
+  <link rel="alternate" type="application/rss+xml" title="Context Window" href="/feed.xml">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- ── Header ─────────────────────────────────────────── -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">
+        Context<span class="accent">Window</span>
+        <span class="shortcode">CW:[]</span>
+      </a>
+      <nav class="site-nav">
+        <a href="/">Posts</a>
+        <a href="/about.html">About</a>
+        <a href="https://youtube.com/@contextwindow" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://postsynaptic.dev" target="_blank" rel="noopener">PostSynaptic</a>
+        <a href="https://substack.com/@contextwindow" target="_blank" rel="noopener" class="nav-cta">Newsletter</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── Article ────────────────────────────────────────── -->
+  <main class="page-wrapper">
+    <article>
+
+      <header class="post-header">
+        <div class="post-item-tags">
+          <span class="post-tag">career</span>
+          <span class="post-tag">fundamentals</span>
+        </div>
+        <h1 class="post-title">What Is an AI PM Actually?</h1>
+        <div class="post-meta">
+          <span class="post-meta-item">Michael Kent</span>
+          <span class="post-meta-sep"></span>
+          <span class="post-meta-item">April 3, 2026</span>
+          <span class="post-meta-sep"></span>
+          <span class="post-meta-item">14 min read</span>
+          <span class="post-meta-sep"></span>
+          <a class="post-meta-item" style="color:var(--token);text-decoration:none;" href="https://youtube.com/watch?v=PLACEHOLDER" target="_blank" rel="noopener">&#9654; Watch on YouTube</a>
+        </div>
+      </header>
+
+      <div class="post-body">
+
+        <p>There are two kinds of job descriptions for AI Product Manager roles right now.</p>
+
+        <p>The first kind reads like someone copy-pasted a traditional PM job description and added &ldquo;experience with LLMs preferred&rdquo; at the bottom. The second kind asks for a PhD in machine learning, five years of experience with a technology that&rsquo;s eighteen months old, and &ldquo;strong intuition for model behavior.&rdquo;</p>
+
+        <p>Neither of them tells you what an AI PM actually does. That&rsquo;s what this post is.</p>
+
+        <hr>
+
+        <h2>What the standard answer gets wrong</h2>
+
+        <p>The standard answer is: &ldquo;An AI PM is a PM who works on products powered by AI.&rdquo; That&rsquo;s technically true and completely useless.</p>
+
+        <p>The version you&rsquo;ll hear from recruiters: &ldquo;You need to understand machine learning and translate between engineers and stakeholders.&rdquo; Also not wrong. Also not the point.</p>
+
+        <p>Here&rsquo;s what they&rsquo;re all missing: <strong>the nature of what you&rsquo;re actually specifying has changed.</strong></p>
+
+        <h2>The core difference — specifying behavior vs. specifying logic</h2>
+
+        <p>Traditional product management is fundamentally about specifying logic.</p>
+
+        <p>You write requirements that describe deterministic behavior: if the user does X, the system does Y. The engineering team implements that logic. You QA it. It either works or it doesn&rsquo;t. The success criteria are binary.</p>
+
+        <p>AI product management is about specifying behavior in systems that are <strong>non-deterministic by design</strong>.</p>
+
+        <p>You are not writing logic. You are writing constraints, examples, and evaluation criteria for a system whose outputs you cannot fully predict in advance. You define what &ldquo;good&rdquo; looks like. You design the measurement apparatus to detect it. And you iterate on the system until it hits that bar &mdash; knowing it will never hit it 100% of the time.</p>
+
+        <p>This is a fundamentally different cognitive task. And it requires skills that traditional PM work doesn&rsquo;t develop.</p>
+
+        <h2>The three skills that actually matter</h2>
+
+        <h3>1 &mdash; Eval design</h3>
+
+        <p>An eval is how you measure whether your AI system is doing what you want it to do. This sounds obvious until you try to do it. Defining what &ldquo;good&rdquo; means for a generative system &mdash; in a way that&rsquo;s measurable, automatable, and actually correlated with user value &mdash; is hard.</p>
+
+        <p>Most teams skip it or do it wrong. The AI PMs who get this right ship better products faster because they can make decisions based on evidence instead of vibes.</p>
+
+        <p>You don&rsquo;t need to write the evals yourself. You need to know enough to define the criteria, catch bad eval design when you see it, and understand what the numbers are actually telling you.</p>
+
+        <h3>2 &mdash; Context window thinking</h3>
+
+        <p>Everything that happens in an LLM interaction is shaped by what&rsquo;s in the context window: the system prompt, the user input, the retrieved documents, the conversation history, the tool results. The model has no memory outside of it. It has no knowledge outside of it (unless you give it tools to retrieve things). Its behavior is entirely a function of what&rsquo;s in that window.</p>
+
+        <p>Understanding this changes how you specify AI features. You stop thinking about &ldquo;what should the AI know&rdquo; and start thinking about &ldquo;what information needs to be in context at the moment the model generates a response, and how does it get there.&rdquo; That&rsquo;s a retrieval and orchestration design problem, not a model selection problem.</p>
+
+        <h3>3 &mdash; Probabilistic quality bars</h3>
+
+        <p>Traditional PMs think in terms of acceptance criteria: the feature is done when it does X. AI PMs need to think in terms of distributions: the feature ships when it achieves quality bar Y on evaluation set Z, with a confidence interval we&rsquo;re comfortable with.</p>
+
+        <p>This is a mindset shift, not a technical skill. But it requires enough technical literacy to have the conversation with your engineering team without either deferring to them entirely or bulldozing them with uninformed opinions.</p>
+
+        <h2>What technical knowledge you actually need</h2>
+
+        <p>You don&rsquo;t need to be able to train a model. You don&rsquo;t need to understand backpropagation. You don&rsquo;t need to know how transformers work at the architecture level.</p>
+
+        <p>You <em>do</em> need to understand:</p>
+
+        <ul>
+          <li><strong>How RAG works and what the failure modes are.</strong> If your AI feature retrieves context from a knowledge base, you need to understand chunking, embedding, retrieval, and reranking well enough to diagnose why it&rsquo;s returning bad results.</li>
+          <li><strong>What a system prompt is and how prompt engineering affects model behavior.</strong> You should be able to write and iterate on system prompts yourself, not just hand it to an engineer.</li>
+          <li><strong>What evaluations are, how they&rsquo;re designed, and what makes them reliable.</strong> This is the most underrated skill in the field right now.</li>
+          <li><strong>The latency and cost tradeoffs of different model and architecture choices.</strong> You don&rsquo;t need to be the expert but you need to not be lost.</li>
+          <li><strong>What agents and tool use actually mean in practice.</strong> Understanding what it means for a model to use tools, why it sometimes uses the wrong one, and how orchestration frameworks work will separate you from people who are just pattern matching on buzzwords.</li>
+        </ul>
+
+        <h2>The career path reality</h2>
+
+        <p>AI PM is not yet a clearly defined career track at most companies. What you&rsquo;ll find in practice:</p>
+
+        <ul>
+          <li><strong>At large tech companies:</strong> dedicated AI PM roles exist but often sit within existing product areas. The AI is a feature of the product, not the product itself.</li>
+          <li><strong>At AI-native startups:</strong> the PM role is often much closer to the model &mdash; you&rsquo;re defining prompts, designing evals, and working directly on the AI behavior. Higher leverage, higher ambiguity.</li>
+          <li><strong>At enterprise software companies:</strong> AI is being bolted onto existing products. This is where most of the jobs are right now, and where the PM role looks most like traditional PM with an AI layer.</li>
+        </ul>
+
+        <p>The skills I described above &mdash; eval design, context window thinking, probabilistic quality bars &mdash; matter most in the second category but are useful in all three.</p>
+
+        <blockquote>
+          The gap between &ldquo;PM who has worked on AI features&rdquo; and &ldquo;AI PM&rdquo; is mostly about whether you understand the measurement problem. Everything else is learnable on the job.
+        </blockquote>
+
+        <p>Next week: RAG explained for PMs &mdash; no math, just the concepts you need to make good product decisions around retrieval systems.</p>
+
+      </div>
+
+      <footer class="post-footer">
+        <a href="/" class="post-back">&larr; All posts</a>
+        <div class="post-channel-links">
+          <a href="https://postsynaptic.dev" target="_blank" rel="noopener">PostSynaptic &rarr;</a>
+          <a href="https://substack.com/@contextwindow" target="_blank" rel="noopener">Newsletter &rarr;</a>
+        </div>
+      </footer>
+
+    </article>
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <a href="/" class="footer-logo">Context<span>Window</span></a>
+      <div class="footer-links">
+        <a href="https://youtube.com/@contextwindow" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://postsynaptic.dev" target="_blank" rel="noopener">PostSynaptic</a>
+        <a href="https://linkedin.com/in/michael-kent" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="/feed.xml">RSS</a>
+      </div>
+      <div class="footer-copy">
+        &copy; 2026 Michael Kent &mdash; contextwindow.dev
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
