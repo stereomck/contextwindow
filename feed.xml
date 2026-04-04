@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Context Window</title>
-    <link>https://contextwindow.dev</link>
+    <link>https://contextwindow.to</link>
     <description>The PM's guide to the AI stack. Technical depth for AI product managers.</description>
     <language>en-us</language>
     <author>Michael Kent</author>
-    <atom:link href="https://contextwindow.dev/feed.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://contextwindow.to/feed.xml" rel="self" type="application/rss+xml"/>
     <lastBuildDate>Thu, 03 Apr 2026 00:00:00 +0000</lastBuildDate>
 
     <!-- ── ENTRIES — add newest at top ─────────────────────
@@ -16,8 +16,8 @@
 
     <item>
       <title>What Is an AI PM Actually?</title>
-      <link>https://contextwindow.dev/posts/what-is-an-ai-pm.html</link>
-      <guid isPermaLink="true">https://contextwindow.dev/posts/what-is-an-ai-pm.html</guid>
+      <link>https://contextwindow.to/posts/what-is-an-ai-pm.html</link>
+      <guid isPermaLink="true">https://contextwindow.to/posts/what-is-an-ai-pm.html</guid>
       <pubDate>Thu, 03 Apr 2026 00:00:00 +0000</pubDate>
       <description>The definitive breakdown — not the job description version. What the role demands, what technical knowledge you actually need, and what makes it genuinely different from traditional PM work.</description>
     </item>

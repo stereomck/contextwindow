@@ -1,16 +1,16 @@
 # Context Window — Site README
-**CW:[]** · contextwindow.dev · Maintained by Claude
+**CW:[]** · contextwindow.to · Maintained by Claude
 
 ---
 
 ## Site structure
 
 ```
-context-window/
+contextwindow/
 ├── index.html          # Homepage + post index — update when adding posts
 ├── about.html          # About page — rarely updated
 ├── feed.xml            # RSS feed — update when adding posts
-├── CNAME               # Custom domain: contextwindow.dev
+├── CNAME               # Custom domain: contextwindow.to
 │
 ├── css/
 │   └── style.css       # All brand CSS — edit here for design changes
@@ -19,7 +19,7 @@ context-window/
     └── what-is-an-ai-pm.html   # One .html file per post
 ```
 
-**How GitHub Pages works:** push any file to this repo and GitHub serves it as a live website at contextwindow.dev. No build step. No server. Just files.
+**How GitHub Pages works:** push any file to this repo and GitHub serves it as a live website at contextwindow.to. No build step. No server. Just files.
 
 ---
 
@@ -65,7 +65,7 @@ Paste this prompt into Claude:
 ```
 CW:[] update index
 
-Add this post to context-window/index.html post list (newest at top):
+Add this post to contextwindow/index.html post list (newest at top):
 - File: posts/[slug].html
 - Date: [Month DD, YYYY]  
 - Tags: [tag1, tag2]
@@ -82,9 +82,9 @@ Paste this prompt into Claude:
 ```
 CW:[] update feed
 
-Add this entry to context-window/feed.xml (newest at top inside <channel>):
+Add this entry to contextwindow/feed.xml (newest at top inside <channel>):
 - Title: [title]
-- URL: https://contextwindow.dev/posts/[slug].html
+- URL: https://contextwindow.to/posts/[slug].html
 - Date: [Day, DD Mon YYYY 00:00:00 +0000]
 - Description: [excerpt]
 
@@ -99,7 +99,7 @@ git commit -m "post: [title]"
 git push
 ```
 
-Site is live at contextwindow.dev within 30 seconds.
+Site is live at contextwindow.to within 30 seconds.
 
 ---
 
@@ -110,7 +110,7 @@ Site is live at contextwindow.dev within 30 seconds.
 ```
 CW:[] design update
 
-In context-window/css/style.css, [describe the change].
+In contextwindow/css/style.css, [describe the change].
 Example: "change the post tag background to use a border instead of fill"
 Example: "increase the hero title font size on mobile"
 Example: "add a reading progress bar to post pages"
@@ -189,9 +189,9 @@ When asking Claude to generate a new post, it will use this structure. You don't
   <meta property="og:title" content="[POST TITLE]">
   <meta property="og:description" content="[EXCERPT]">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://contextwindow.dev/posts/[SLUG].html">
+  <meta property="og:url" content="https://contextwindow.to/posts/[SLUG].html">
   <meta property="article:published_time" content="[YYYY-MM-DD]">
-  <link rel="canonical" href="https://contextwindow.dev/posts/[SLUG].html">
+  <link rel="canonical" href="https://contextwindow.to/posts/[SLUG].html">
   <link rel="alternate" type="application/rss+xml" title="Context Window" href="/feed.xml">
   <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -235,8 +235,8 @@ When asking Claude to generate a new post, it will use this structure. You don't
 
 ```bash
 # First time setup
-git clone https://github.com/stereomck/context-window.git
-cd context-window
+git clone https://github.com/stereomck/contextwindow.git
+cd contextwindow
 
 # Every time you add/update content
 git add .
@@ -246,7 +246,7 @@ git commit -m "design: [change]"# for CSS/layout changes
 git push
 
 # Check build status
-# Go to: github.com/stereomck/context-window/actions
+# Go to: github.com/stereomck/contextwindow/actions
 ```
 
 ---
@@ -265,13 +265,13 @@ Using these at the start of a prompt in your ContentOS Claude project triggers t
 
 ## Checklist — going live
 
-- [ ] Create GitHub repo named `context-window` (public)
+- [ ] Create GitHub repo named `contextwindow` (public)
 - [ ] Push all files from this folder
 - [ ] Settings → Pages → Deploy from branch → main / root
-- [ ] Buy domain: contextwindow.dev (Namecheap or Cloudflare Registrar)
+- [ ] Buy domain: contextwindow.to (Namecheap or Cloudflare Registrar)
 - [ ] Add CNAME record: `www` → `stereomck.github.io`
 - [ ] Add A records: four GitHub IPs (185.199.108-111.153)
-- [ ] Settings → Pages → Custom domain → contextwindow.dev
+- [ ] Settings → Pages → Custom domain → contextwindow.to
 - [ ] Wait up to 24 hours for DNS propagation
 - [ ] Tick "Enforce HTTPS" once it becomes available
 - [ ] Update all placeholder URLs (YouTube, LinkedIn, Substack) in HTML files
