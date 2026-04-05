@@ -219,7 +219,7 @@ When asking Claude to generate a new post, it will use this structure. You don't
         <a href="/" class="post-back">← All posts</a>
         <div class="post-channel-links">
           <a href="https://postsynaptic.dev">PostSynaptic →</a>
-          <a href="https://substack.com/@contextwindow">Newsletter →</a>
+          <a href="https://contextwindowpm.substack.com">Newsletter →</a>
         </div>
       </footer>
     </article>
