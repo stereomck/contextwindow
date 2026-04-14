@@ -446,7 +446,7 @@ body::before {
 .footer-copy {
   font-family: var(--font-mono);
   font-size: 0.65rem;
-  color: var(--void-border);
+  color: var(--paper-dim);
   letter-spacing: 0.04em;
   width: 100%;
   margin-top: 0.5rem;
